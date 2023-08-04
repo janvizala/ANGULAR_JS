@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple validation</title>
+    <script src="angular.min.js"> </script>
+    <script src="14_module.js"> </script>
+    <style>
+        body
+        {
+            background-color: aquamarine;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+        }
+        span
+        {
+            font-size: small;
+            color: red;
+            font-weight: bolder;
+        }
+
+        input.ng-dirty
+        {
+            background-color: coral;
+        }
+        input.ng-touched
+        {
+            background-color: pink;
+        }
+        form.ng-pristine
+        {
+            background-color: yellowgreen;
+        }
+        form.ng-dirty
+        {
+            background-color: darkgrey;
+        }
+        /*
+        input.ng-valid
+        {
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body ng-controller="mycontroller">
+    <form name="myform">
+         First Name: <input type="text" ng-model="fname" ng-maxlength="7" ng-minlength="4"
+         name="myfield" required>
+        <span style="color:red;"> </span>
+        <span ng-show="myform.myfield.$error.required"> Please write something... </span>
+        <span ng-show="myform.myfield.$error.minlength"> Length is too short... </span>
+        <span ng-show="myform.myfield.$error.maxlength"> Length is very big... </span>
+        <br>
+
+        Last Name: <input type="text" ng-model="lname" ng-maxlength="7" ng-minlength="4"
+         name="lastname" required>
+         <span ng-show="myform.lastname.$dirty" style="color:red;">I am modified</span>
+         <span ng-show="myform.lastname.$invalid" style="color:blue;">Min length is 4</span>
+         <span ng-show="myform.lastname.$valid" style="color:blue;">Valid Field</span>
+         <br>
+
+        Email-id: <input type="email" ng-model="email" name="email" required>
+        <span ng-show="myform.email.$error.required"> Please write email id... </span> 
+        <span ng-show="myform.email.$error.email"> Enter valid email id... </span>
+        <br>
+
+        Address: <textarea placeholder="write here.." ng-model="address" name="addr" required> </textarea>
+        <span ng-show="myform.addr.$error.required"> Please write address...</span>
+        <span> </span>
+        <br>
+
+        <button ng-click="reset()"> RESET </button>
+        
+    </form>
+</body>
+</html>

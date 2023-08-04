@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng-show</title>
+    <script src="angular.min.js"> </script>
+    <script src="8&9_module.js"> </script>
+</head>
+<body ng-controller="mycontroller">
+    <input type="checkbox" value="check!!" ng-model="checks"> check
+    <div ng-show="checks">
+        <h1>This is ng-show.</h1>
+        <h3> Welcome IT-A.</h3>
+    </div> 
+    <hr>
+
+    <input type="checkbox" value="check!" ng-model="check"> Show-Salary
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th> Name </th>
+            <th> Salary </th>
+        </tr>
+        <tr ng-repeat="emp in employee">
+            <td> {{emp.name}} </td>
+            <td ng-hide="check"> ***** </td>
+            <td ng-show="check"> {{emp.salary}} </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ng model dropdown</title>
+    <script src="angular.min.js">
+
+    </script>
+    <style>
+        body
+        {
+            background-color: {{color}};
+        }
+        textarea
+        {
+            background-color: {{abc}};
+        }
+    </style>
+</head>
+<body>
+    <select ng-model="color">
+        <option value="pink"> Pink </option>
+        <option value="grey"> Grey </option>
+        <option value="skyblue"> Skyblue </option>
+        <option value="violet"> violet </option>
+    </select>
+
+    <textarea ng-model="abc"> Write Message </textarea>
+</body>
+</html>

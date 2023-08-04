@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <script src="angular.min.js"> </script>
+    <script src="11_module.js"> </script>
+</head>
+<body ng-controller="mycontroller">
+    <h1> Location service</h1>
+    Url= {{myurl}}
+    <br>
+    Protocol= {{myprotocol}}
+    <br>
+    Host= {{myhost}}
+    <br>
+    Port= {{myport}}
+    <hr>
+
+    <h1> Interval service</h1>
+    count increases after each 3 sec = {{count}}
+    <hr>
+
+    <h1> Timeout service</h1>
+    Dept details after 5 sec= {{dept}}
+    <hr>
+
+    <h1> Window service</h1>
+    <input type="button" value="My alert button" ng-click="myalert('Hello IT-A Batch')">
+</body>
+</html>

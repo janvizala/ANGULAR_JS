@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"> </script>
+    <script src="5_module.js"> </script>
+</head>
+<body ng-controller="Mycontroller">
+    {{name}}&copy;
+    <h3> {{name|lowercase}} </h3>
+    <h3> {{name|uppercase}} </h3>
+    <hr>
+    {{num}}
+    <h3> {{num|currency}} </h3>
+    <h3> {{num|currency:"&#8377"}} </h3>
+    <hr>
+    {{mydate}}
+    <h1> {{mydate|date}} </h1>
+    <h3> {{mydate|date:"dd-MM-y"}} </h3>
+    <h3> {{mydate|date:"dd-MM-y:EEEE"}} </h3>
+    <h3> {{mydate|date:"HH-mm-ss"}} </h3>
+    <!-- 
+        *year:-
+        "yyyy" year(2023)
+        "yy" year(23)
+        "y" year(2023)
+
+        *month:-
+        "MMMM" (January)
+        "MMM" (Jan)
+        "MM" (01)
+        "M" (1)
+
+        *Day:-
+        "dd" (08)
+        "d" (8)
+        "EEEE" (Tuesday)
+        "EEE" (Tue)
+
+        *Time:-
+
+        *Hour:-
+        "HH" ,00-23(09)
+        "H" ,00-23(9)
+        "hh" ,00-12(09)
+        "h" ,00-12(9)
+
+        *minutes:-
+        "mm" (05)
+        "m" (5)
+
+        *seconds:-
+        "ss" (05)
+        "s" (5)
+        "sss" milisecond(035)
+        "a" (AM/PM)
+    -->
+    <hr>
+    <h3> {{mydate|date:"short"}}</h3>
+    <h3> {{mydate|date:"medium"}}</h3>
+    <h3> {{mydate|date:"shortDate"}}</h3>
+    <h3> {{mydate|date:"mediumDate"}}</h3>
+    <h3> {{mydate|date:"longDate"}}</h3>
+    <h3> {{mydate|date:"fullDate"}}</h3>
+    <h3> {{mydate|date:"shortTime"}}</h3>
+    <h3> {{mydate|date:"mediumTime"}}</h3>
+</body>
+</html>

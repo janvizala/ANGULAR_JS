@@ -1,0 +1,30 @@
+<h1> This is array.html</h1>
+<ul>
+    <li ng-repeat="newarr in myarr">
+        {{newarr}}
+    </li>
+</ul>
+<hr>
+<h1> My Form</h1>
+<form>
+    <label> Name: </label>
+    <input type="text" ng-model="name">
+    <br>
+    <label> Password: </label>
+    <input type="password" ng-model="passw">
+    <br>
+    <label> Email-id: </label>
+    <input type="text" ng-model="eml">
+    <br>
+    <label> Mobile no: </label>
+    <input type="text" ng-model="mobile">
+    <br>
+    <label> Gender: </label>
+    <input type="radio" name="xyz" ng-model="gen"> Male
+    <input type="radio" name="xyz" ng-model="gen"> Female
+    <br>
+    <label> Address: </label>
+    <textarea ng-model="add"> </textarea>
+    <br>
+    <input type="button" value="submit" ng-click="form()">
+</form>

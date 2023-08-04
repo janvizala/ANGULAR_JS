@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"> </script>
+    <script src="4_module.js"> </script>
+</head>
+<body ng-controller="Mycontroller">
+    {{students}}
+    <ul>
+        <li ng-repeat="Item in students"> {{Item}} </li>
+    </ul>
+
+    {{branch}}
+    <p ng-repeat="(x,y) in branch">
+        {{x}}={{y}}
+    </p>
+
+    {{items}}
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th> Name </th>
+            <th> Branch </th>
+        </tr>
+        <tr ng-repeat="emp in items">
+            <td> {{emp.name}} </td>
+            <td> {{emp.branch}} </td>
+        </tr>
+    </table>
+</body>
+</html>

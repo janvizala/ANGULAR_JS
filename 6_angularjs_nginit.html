@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng-init example</title>
+    <script src="angular.min.js">
+
+    </script>
+</head>
+<body>
+    <div ng-init="branch='IT';total_student=37;">
+        VARIABLE 
+        <br>
+        {{branch}}
+        <br>
+        {{total_student}}
+    </div>
+    
+    <div ng-init="Marks=[78,85,70,92];">
+        <br>
+        ARRAY
+        <br>
+        {{Marks}}
+        <br>
+        {{Marks[0]}}
+        <br>
+        {{Marks[1]}}
+        <br>
+        {{Marks[2]}}
+        <br>
+        {{Marks[3]}}
+    </div>
+
+    <div ng-init="Info={Name:'Jainish',Roll:'20',Marks:'95'}">
+        <br>
+        OBJECT
+        <br>
+        {{Info}}
+        <br>
+        {{Info.Name}}
+        <br>
+        {{Info.Roll}}
+        <br>
+        {{Info.Marks}}
+    </div>
+
+    <div ng-init="students=[{branch:'IT',total:37},{branch:'ICT',total:27}]">
+        <br>
+        ARRAY OF OBJECT
+        <br>
+        {{students[0].branch}}
+        {{students[0].total}}
+        <br>
+        {{students[1].branch}}
+        {{students[1].total}}
+    </div>
+</body>
+</html>

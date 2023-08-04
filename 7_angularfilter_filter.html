@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"> </script>
+    <script src="7_module.js"> </script>
+</head>
+<body ng-controller="mycontroller">
+    <ul>
+        <li ng-repeat="names in name|filter:'c'">
+            {{names}}
+        </li>
+        <hr>
+        Name:<input type="text" ng-model="ja">
+        <br>
+        Branch:<input type="text" ng-model="ra">
+        <li ng-repeat="tmp in items|filter:{'name':ja,'branch':ra}">
+            {{tmp}}
+        </li>
+    </ul>
+    <hr>
+
+    <input type="text" ng-model="nameq">
+    <ul>
+        <li ng-repeat="names in name|filter:nameq">
+            {{names}}
+        </li>
+    </ul>
+    <hr>
+
+    <input type="text" ng-model="nameq"> Case Sensitive
+    <ul>
+        <li ng-repeat="names in name|filter:nameq:true">
+            {{names}}
+        </li>
+    </ul>
+    <hr>
+    linitTo Filter
+    <!-- limitTo filter-->
+    <ul>
+        <li ng-repeat="names in name|limitTo:3">
+            {{names}}
+        </li>
+    </ul>
+    <hr>
+    <ul>
+        <li ng-repeat="names in name|limitTo:3:2"> <!-- 3:2 starts with 2nd index-->
+            {{names}}
+        </li>
+    </ul>
+    <hr>
+    <p>
+        {{students|limitTo:6}}
+    </p>
+</body>
+</html>
